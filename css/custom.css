@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.reveal .first__slide--image {
+  width: 50%;
+  height: 50%;
+}
+
+.reveal .first__slide--title {
+  font-family: 'Poppins';
+  font-size: 45px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}

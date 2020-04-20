@@ -4,45 +4,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/webslides.css">
-  <title>PWA Presentation Website</title>
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/moon.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>PWA Presentation - Brown Bag</title>
 </head>
 
 <body>
 
-  <main role="main">
-    <article id="webslides" class="horizontal">
-
-      <!-- SLIDE 1 -->
-
-      <section>
-        <span class="background-right-bottom" style="background-image:url('images/backgroundImage.png')" ,></span>
-
-        <div class="wrap">
-          <h1 class="text-landing text-shadow">Progressive Web Apps</h1>
-          <h2 class="text-intro">The future of mobile web</h2>
-        </div>
+  <div class="reveal">
+    <div class="slides">
+      <section class="first__slide">
+        <img class="first__slide--image" src="images/pwa.svg" alt="PWA SVG LOGO">
+        <div class="first__slide--title">PROGRESSIVE WEB APP</div>
+        <p class="first__slide--para">Websites that took all the right vitamins</p>
       </section>
-
-      <!-- SLIDE 2 -->
-
       <section>
-        Slide 2
+        <section>Vertical Slide 1</section>
+        <section>
+          <img data-src="images/backgroundImage.png">
+        </section>
       </section>
-
-      <!-- SLIDE 3 -->
 
       <section>
         Slide 3
       </section>
 
+      <section>
+        Slide 4
+      </section>
 
-    </article>
-  </main>
+      <section>
+        Slide 5
+      </section>
 
-  <script src="js/webslides.js"></script>
+      <section>
+        Slide 6
+      </section>
+    </div>
+  </div>
+
+  <script src="js/reveal.js"></script>
   <script>
-    window.ws = new WebSlides();
+    Reveal.initialize({
+      controls: true, // default
+      controlsTutorial: true, //default
+      controlsLayout: 'bottom-right', // edges or bottom right
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      // viewDistance: 3, for lazy loading
+      hash: true, // adds slide number to URL, useful for reloading
+      overview: true,
+      center: true, // default
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+
+      dependencies: [
+        // Syntax highlight for <code> elements
+        {src: 'js/highlight.js', async: true},
+
+        // Zoom in and out with Alt+click
+        {src: 'js/zoom.js', async: true},
+      ],
+    });
   </script>
 </body>
 
