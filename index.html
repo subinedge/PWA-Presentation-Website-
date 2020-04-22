@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/moon.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/monokai.css" />
   <title>PWA Presentation - Brown Bag</title>
 </head>
 
@@ -86,9 +87,61 @@
 
 
 
+
       <!--  SLIDE 6 -->
       <section>
-        Websites that have implemented PWA
+        <h3 class="seventh-slide">Initializing PWA</h3>
+        <pre class="hljs"><code data-line-numbers="1-22">     
+          {
+          "name": "HackerWeb",
+          "short_name": "HackerWeb",
+          "start_url": ".",
+          "display": "standalone",
+          "background_color": "#fff",
+          "description": "A simply readable Hacker News app.",
+          "icons": [{
+          "src": "images/touch/homescreen168.png",
+          "sizes": "168x168",
+          "type": "image/png"
+          }, {
+          "src": "images/touch/homescreen192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+          }]
+          }
+          </code>
+        </pre>
+      </section>
+
+
+
+      <!--  SLIDE 7 -->
+      <section>
+        Some of the Websites that have implemented PWA
+
+        <ul>
+          <li>Alibaba</li>
+          <li>Financial Times | UK</li>
+          <li>Smashing Magazine</li>
+        </ul>
+      </section>
+
+
+
+      <!--  SLIDE 8 -->
+      <section>
+        <h4 class="seventh-slide">Business opinion after implementing PWA to their site</h4>
+
+        <ul>
+          <li>65% increase in pages per session</li>
+          <li>20% decrease in bounce rate</li>
+          <li>loads quickly on 2G and 3G networks</li>
+          <li>No need to miss any important feature by forgetting to update</li>
+          <li>the PWA is lesser than 600KB over the wire vs. 30-100MB of downloaded data needed to install the native
+            Android
+            app
+          </li>
+        </ul>
       </section>
     </div>
   </div>
@@ -111,7 +164,7 @@
 
       dependencies: [
         // Syntax highlight for <code> elements
-        {src: 'js/highlight.js', async: true},
+        {src: 'js/highlight.js', async: true, callback: function () {hljs.initHighlightingOnLoad();}},
 
         // Zoom in and out with Alt+click
         {src: 'js/zoom.js', async: true},
